@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden; /* Prevent scrolling */
+    z-index: 10;
+}
+
+.section {
+    z-index: 10;
+}
+
+#container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
+#overlay {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between title and buttons */
+    align-items: center; /* Center items vertically */
+    position: absolute; /* Position overlay absolutely */
+    top: 20px; /* Position from the top */
+    left: 20px; /* Position from the left */
+    color: white; /* Text color */
+    z-index: 10; /* Ensure overlay is above the canvas */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    width: calc(100% - 40px); /* Full width minus padding */
+}
+
+h1 {
+    font-size: 3rem;
+    margin-right: auto; /* Pushes the title to the left */
+}
+
+.button-container {
+    display: flex; /* Use flexbox for buttons container */
+}
+
+button {
+    background-color: #0077ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px; /* Space between buttons */
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+#welcome-container {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the content */
+    color: black; /* Text color */
+    text-align: center; /* Center-align text */
+    z-index: 10; /* Make sure it's above the 3D scene */
+    font-family: 'Arial', sans-serif; /* Font style */
+    padding: 20px; /* Padding around the text */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+#welcome-container h1 {
+    font-size: 2.5em; /* Title size */
+    margin: 0; /* Remove margin */
+}
+
+#welcome-container p {
+    font-size: 1.2em; /* Description size */
+}
+
+/* Add any additional styles here */
